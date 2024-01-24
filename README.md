@@ -1,9 +1,9 @@
-# EiTPose
-This is a research repository for [EiTPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation]() (CHI 2024). It contains the following:
+# EITPose
+This is a research repository for [EITPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation]() (CHI 2024). It contains the following:
 - Datasets for the 3 evaluations described in the paper: 
-    - EiT/hand pose within sessions, across sessions, across users
-    - EiT/hand pose within sessions across a long period of time
-    - EiT/hand gesture within sessions and across users
+    - EIT/hand pose within sessions, across sessions, across users
+    - EIT/hand pose within sessions across a long period of time
+    - EIT/hand gesture within sessions and across users
 - Data Visualizer for the provided datasets
 - Evaluation experiments:
     - MPJPE Within Session
@@ -14,12 +14,12 @@ This is a research repository for [EiTPose: Wearable and Practical Electrical Im
     - Gesture Classification Cross User
 
 
-![](https://github.com/NU-SPICE-LAB/EiTPose/blob/main/media/media1.gif?raw=true)
-![](https://github.com/NU-SPICE-LAB/EiTPose/blob/main/media/media2.gif?raw=true)
+![](https://github.com/NU-SPICE-LAB/EITPose/blob/main/media/media1.gif?raw=true)
+![](https://github.com/NU-SPICE-LAB/EITPose/blob/main/media/media2.gif?raw=true)
 
 ## File Structure
 ```
-EiTPose
+EITPose
 |- src
     |- analysis
         |- evaluation
@@ -45,7 +45,7 @@ EiTPose
 ### Data Visualizer
 Change Directories to the correct folder:
 ```bash
-cd ./EiTPose/src/data_visualizer
+cd ./EITPose/src/data_visualizer
 ```
 Run the Visualizer:
 ```bash
@@ -57,19 +57,19 @@ Hit the "Play" button or move the slider timeline to examine the data changing o
 ### Evaluation
 Change Directories to the evaluation folder:
 ```bash
-cd ./EiTPose/src/analysis/evaluation
+cd ./EITPose/src/analysis/evaluation
 ```
 Run one of the evaluations. For example to evaluate the Mean Per Joint Positional Error (MPJPE) within session:
 ```bash
 python experiment_mpjpe_within_session.py
 ```
-Outputs will be saved to EiTPose/src/analysis/evaluation/experiment_results/
+Outputs will be saved to EITPose/src/analysis/evaluation/experiment_results/
 
 
 ## Available Datasets
-- EiTPose/src/data/processed_pose_data: EiT/hand pose within sessions, across sessions, across users
-- EiTPose/src/data/processed_longitudinal_data: EiT/hand pose within sessions across a long period of time
-- EiTPose/src/data/processed_gesture_data: EiT/hand gesture within sessions and across users
+- EITPose/src/data/processed_pose_data: EIT/hand pose within sessions, across sessions, across users
+- EITPose/src/data/processed_longitudinal_data: EIT/hand pose within sessions across a long period of time
+- EITPose/src/data/processed_gesture_data: EIT/hand gesture within sessions and across users
 
 ## System Requirements
 This was written in python3 (3.8.16) using sci-kit learning as the main ML libraries. This was developed in a Windows environment, but should run in Mac and Linux too. The environment.yml file here can be used to initialize a conda environment:
