@@ -1,5 +1,8 @@
 # EITPose
 This is a research repository for [EITPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation]() (CHI 2024). It contains the following:
+
+- EITPose Firmware file (tested with Teensyduino2.0)
+- EITPose Hardware file
 - Datasets for the 3 evaluations described in the paper: 
     - EIT/hand pose within sessions, across sessions, across users
     - EIT/hand pose within sessions across a long period of time
