@@ -17,7 +17,7 @@ from src.analysis.preprocessing.helper_functions import scale_window_reshape
 
 
 class Experiment:
-    def __init__(self, participant_dls, experiment_params, evaluation, rounds='all', print_fcn=None):
+    def __init__(self, participant_dls, experiment_params, evaluation, rounds='all', print_fcn=None, output_folder=None):
         self.participant_dls = participant_dls
         self.evaluation = evaluation
         self.x_cols = experiment_params['x_cols']
@@ -40,13 +40,16 @@ class Experiment:
         else:
             self.print_fcn = print
 
+        if output_folder:
+            self.output_folder = output_folder
+        else:
+            self.output_folder = None
+
         self.data_splitter = DataSplitter(self.participant_dls)
         if self.evaluation == 'withinsession':
             self.splitter = self.data_splitter.create_within_session_split_generator
         elif self.evaluation == 'crosssession':
             self.splitter = self.data_splitter.create_cross_session_split_generator
-        elif self.evaluation == 'crosssession_full':
-            self.splitter = self.data_splitter.create_cross_session_with_all_users_split_generator
         elif self.evaluation == 'crossuser':
             self.splitter = self.data_splitter.create_cross_user_split_generator
         elif self.evaluation == 'withinsession_kfold':
@@ -187,7 +190,10 @@ class Experiment:
                         now = datetime.now()
                         # Convert the date and time to a string in the format YYYYMMDD_HHMMSS
                         save_time = now.strftime("%Y%m%d_%H%M%S")
-                        filename = path_to_y_pred / modelname / evaluation / self.evaluation
+                        if self.output_folder:
+                            filename = self.output_folder / 'y_pred'
+                        else:
+                            filename = path_to_y_pred / modelname / evaluation / self.evaluation
                         Path.mkdir(filename, parents=True, exist_ok=True)
                         np.save(str(filename / str(''.join(train_participants) + '_'  + ''.join(test_participants) + '_' + save_time)), y_pred)
 
@@ -242,7 +248,10 @@ class Experiment:
             now = datetime.now()
             # Convert the date and time to a string in the format YYYYMMDD_HHMMSS
             save_time = now.strftime("%Y%m%d_%H%M%S")
-            filename = path_to_models / modelname / evaluation / self.evaluation / save_time
+            if self.output_folder:
+                filename = self.output_folder / 'models'
+            else:
+                filename = path_to_models / modelname / evaluation / self.evaluation / save_time
             Path.mkdir(filename, parents=True, exist_ok=True)
 
             for trainname, testname, model in model_list:

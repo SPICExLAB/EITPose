@@ -59,7 +59,7 @@ class ETRExperimentRunner:
 
             output = ''
             for evaluation_type, rounds in experiment['evaluations'].items():
-                etr_exp = Experiment(self.participant_dls, experiment['experiment_params'], evaluation_type, rounds, log_print)
+                etr_exp = Experiment(self.participant_dls, experiment['experiment_params'], evaluation_type, rounds, log_print, output_folder)
                 if experiment['experiment_params']['evaluator_type'] == 'classifier':
                     acc_mean, acc_std, acc_list, cls_rep_list, conf_matrix_list, save_location = etr_exp.run_experiment()
                     combined_conf_matrix = np.sum(np.stack(conf_matrix_list), axis=0)
