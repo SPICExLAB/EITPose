@@ -1,8 +1,9 @@
 # EITPose
 This is a research repository for [EITPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation]() (CHI 2024). It contains the following:
 
-- EITPose Firmware file (tested with Teensyduino2.0)
-- EITPose Hardware file
+![](https://github.com/SPICExLAB/EITPose/blob/main/media/media1.gif?raw=true)
+![](https://github.com/SPICExLAB/EITPose/blob/main/media/media1.gif?raw=true)
+
 - Datasets for the 3 evaluations described in the paper: 
     - EIT/hand pose within sessions, across sessions, across users
     - EIT/hand pose within sessions across a long period of time
@@ -15,10 +16,6 @@ This is a research repository for [EITPose: Wearable and Practical Electrical Im
     - MPJPE Longitudinal
     - Gesture Classification Within Session
     - Gesture Classification Cross User
-
-
-![](https://github.com/NU-SPICE-LAB/EITPose/blob/main/media/media1.gif?raw=true)
-![](https://github.com/NU-SPICE-LAB/EITPose/blob/main/media/media2.gif?raw=true)
 
 ## File Structure
 ```
@@ -73,6 +70,9 @@ Outputs will be saved to EITPose/src/analysis/evaluation/experiment_results/
 - EITPose/src/data/processed_pose_data: EIT/hand pose within sessions, across sessions, across users
 - EITPose/src/data/processed_longitudinal_data: EIT/hand pose within sessions across a long period of time
 - EITPose/src/data/processed_gesture_data: EIT/hand gesture within sessions and across users
+
+### Models
+No models have been uploaded because they are quite large for certain experiment configurations. However, the given experiments can produce the models by setting the "save_model" parameter to True and running the experiment.
 
 ## System Requirements
 This was written in python3 (3.8.16) using sci-kit learning as the main ML libraries. This was developed in a Windows environment, but should run in Mac and Linux too. The environment.yml file here can be used to initialize a conda environment:
