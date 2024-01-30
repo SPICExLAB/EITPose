@@ -2,7 +2,7 @@
 This is a research repository for [EITPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation]() (CHI 2024). It contains the following:
 
 ![](https://github.com/SPICExLAB/EITPose/blob/main/media/media1.gif?raw=true)
-![](https://github.com/SPICExLAB/EITPose/blob/main/media/media1.gif?raw=true)
+![](https://github.com/SPICExLAB/EITPose/blob/main/media/media2.gif?raw=true)
 
 - Datasets for the 3 evaluations described in the paper: 
     - EIT/hand pose within sessions, across sessions, across users
