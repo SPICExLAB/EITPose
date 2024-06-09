@@ -84,6 +84,35 @@ If you are not using Anaconda, you can also use pip to install the required pyth
 ```bash
 pip install -r requirements.txt
 ```
+
+## Reference
+
+Alexander Kyu, Hongyu Mao, Junyi Zhu, Mayank Goel, and Karan Ahuja. 2024. EITPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation. In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '24). Association for Computing Machinery, New York, NY, USA, Article 402, 1–10. 
+
+[Read or Download the paper here.](https://doi.org/10.1145/3613904.3642663)
+
+
+BibTex Reference:
+```
+@inproceedings{10.1145/3613904.3642663,
+author = {Kyu, Alexander and Mao, Hongyu and Zhu, Junyi and Goel, Mayank and Ahuja, Karan},
+title = {EITPose: Wearable and Practical Electrical Impedance Tomography for Continuous Hand Pose Estimation},
+year = {2024},
+isbn = {9798400703300},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3613904.3642663},
+doi = {10.1145/3613904.3642663},
+abstract = {Real-time hand pose estimation has a wide range of applications spanning gaming, robotics, and human-computer interaction. In this paper, we introduce EITPose, a wrist-worn, continuous 3D hand pose estimation approach that uses eight electrodes positioned around the forearm to model its interior impedance distribution during pose articulation. Unlike wrist-worn systems relying on cameras, EITPose has a slim profile (12 mm thick sensing strap) and is power-efficient (consuming only 0.3 W of power), making it an excellent candidate for integration into consumer electronic devices. In a user study involving 22 participants, EITPose achieves with a within-session mean per joint positional error of 11.06 mm. Its camera-free design prioritizes user privacy, yet it maintains cross-session and cross-user accuracy levels comparable to camera-based wrist-worn systems, thus making EITPose a promising technology for practical hand pose estimation.},
+booktitle = {Proceedings of the CHI Conference on Human Factors in Computing Systems},
+articleno = {402},
+numpages = {10},
+keywords = {Electrical Impedance Tomography, Extended Reality, Hand Gesture, Hand Pose, Input, Interaction Technique, Natural User Interfaces},
+location = {<conf-loc>, <city>Honolulu</city>, <state>HI</state>, <country>USA</country>, </conf-loc>},
+series = {CHI '24}
+}
+```
+
 ## Disclaimer
 
 ```
